@@ -73,8 +73,8 @@ struct MineArgs {
     #[arg(long, required = true)]
     token: String,
 
-    /// Difficulty level (6-10)
-    #[arg(long, default_value_t = 6, value_parser = clap::value_parser!(u32).range(6..=10))]
+    /// Difficulty level (5-11)
+    #[arg(long, default_value_t = 8, value_parser = clap::value_parser!(u32).range(5..=11))]
     difficulty: u32,
 
     /// Number of tasks to fetch and solve in one loop iteration
